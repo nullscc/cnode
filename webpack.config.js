@@ -41,6 +41,7 @@ module.exports = {
     port: 8080,
     index: "index.html",
     inline: true
-  }
+  },
+  mode: 'development'
 
 }
