@@ -1,16 +1,21 @@
 <template>
     <div id="app">
-    <h1>{{msg}}</h1>
+    <cnode-head></cnode-head>
     </div>
 </template>
 
 <script>
+import cnodeHead from './components/cnodeHead';
+
 export default {
     name: 'app',
     data() {
-        return {
-            msg: 'hello vue',
-        };
+      return {
+        msg: 'hello vue',
+      };
+    },
+    components: {
+      cnodeHead,
     },
 };
 </script>
