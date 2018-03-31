@@ -1,6 +1,8 @@
 <template>
     <div class='head'>
             <div class='dialogDiv'>
+                <router-link :to='{name:"RootRoute"}'>回主页</router-link>
+
                 <span>
                     <strong>作者: &nbsp;&nbsp;</strong>
                 </span>
@@ -11,7 +13,7 @@
                     <strong>源代码: &nbsp;&nbsp;</strong>
                 </span>
                 <a href='https://github.com/nullscc/cnode' target='_blank'>Github</a>
-                <span class='star'>&nbsp;&nbsp;Star Star</span>
+                <span class='star'>&nbsp;&nbsp;Star</span>
                 <br>
                 <br>
                 <span>
@@ -30,7 +32,9 @@
 
 <style>
 .dialogDiv {
-  outline: solid 2px cyan;
-  margin: 0 10em;
+  width: 980px;
+  margin: 0 auto;
+  margin-bottom: 4em;
+  border-bottom: solid 1px #eee;
 }
 </style>

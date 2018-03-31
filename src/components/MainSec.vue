@@ -66,6 +66,7 @@ export default {
 
 <style>
 .secDiv {
-  outline: solid 1px purple;
+  width: 980px;
+  margin: 0 auto;
 }
 </style>

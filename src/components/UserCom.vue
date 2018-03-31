@@ -1,4 +1,4 @@
-i<template>
+<template>
     <div class='secDiv'>
         <div class='profile'>
             <div>
@@ -51,6 +51,7 @@ export default {
         };
     },
     created() {
+        console.log(this.$route.path)
         this.$http({
             url: `https://cnodejs.org/api/v1${this.$route.path}`,
             method: 'get',
