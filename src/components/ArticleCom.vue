@@ -85,8 +85,4 @@ export default {
   float: left;
   width: 700px;
 }
-.article {
-  width: 980px;
-  margin: 0 auto;
-}
 </style>

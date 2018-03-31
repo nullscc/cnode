@@ -17,3 +17,10 @@ export default {
 };
 </script>
 
+<style>
+#app {
+  width: 980px;
+  margin: 0 auto;
+}
+</style>
+

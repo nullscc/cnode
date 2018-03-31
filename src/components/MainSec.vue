@@ -65,8 +65,4 @@ export default {
 
 
 <style>
-.secDiv {
-  width: 980px;
-  margin: 0 auto;
-}
 </style>

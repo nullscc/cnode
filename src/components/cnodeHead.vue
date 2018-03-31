@@ -32,8 +32,6 @@
 
 <style>
 .dialogDiv {
-  width: 980px;
-  margin: 0 auto;
   margin-bottom: 4em;
   border-bottom: solid 1px #eee;
 }
