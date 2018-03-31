@@ -1,6 +1,8 @@
 <template>
     <div id="app">
     <cnode-head></cnode-head>
+    <router-view name='main'></router-view>
+
     </div>
 </template>
 
