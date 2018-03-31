@@ -3,7 +3,8 @@
         <div v-for='item of content'>
                 <img :src='item.author.avatar_url' :title='item.author.loginname'>
             <div class='textDiv'>
-                <h4>{{item.title}}</h4>
+                <router-link :to='{name:"ArticleRoute",params:{id:item.id}}'>{{item.title}}</router-link>
+
                 <div class='stuff'>
                     <span>回复：{{item.reply_count}}</span>
                     <span>创建于：{{item.create_at | dealTime}}</span>
