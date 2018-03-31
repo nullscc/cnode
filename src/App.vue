@@ -9,11 +9,6 @@ import cnodeHead from './components/cnodeHead';
 
 export default {
     name: 'app',
-    data() {
-      return {
-        msg: 'hello vue',
-      };
-    },
     components: {
       cnodeHead,
     },
