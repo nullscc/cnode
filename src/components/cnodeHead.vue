@@ -2,7 +2,8 @@
     <div class='head'>
             <div class='dialogDiv'>
                 <router-link :to='{name:"RootRoute"}'>回主页</router-link>
-
+                <el-button type="text" @click='aboutShow=true'>关于</el-button>
+                <el-dialog title="关于" :visible.sync="aboutShow">
                 <span>
                     <strong>作者: &nbsp;&nbsp;</strong>
                 </span>
@@ -26,9 +27,21 @@
                     <li>Element</li>
                     <li>CnodeJS API</li>
                 </ul>
+                </el-dialog>
             </div>
     </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      aboutShow: false,
+    }
+  }
+
+};
+</script>
 
 <style>
 .dialogDiv {
