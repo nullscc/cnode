@@ -1,10 +1,10 @@
 <template>
 <el-row type="flex" justify="space-between">
   <router-link :to='{name:"RootRoute"}'>
-    <el-button type="text">主页</el-button>
+    <el-button type="text"><h1>主页</h1></el-button>
   </router-link>
   
-  <el-button type="text" @click='aboutShow=true'>关于</el-button>
+  <el-button type="text" @click='aboutShow=true'><h1>关于</h1></el-button>
 
   <el-dialog title="关于" :visible.sync="aboutShow">
     <span>

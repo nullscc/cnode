@@ -30,6 +30,16 @@ export default {
 <style>
 #app {
   margin: 0 8em;
+  font-size: 1.2rem;
 }
+a {
+  text-decoration: none;
+  color: black;
+} 
+
+a:visited {
+  color: #a1a1a2;
+}
+
 </style>
 

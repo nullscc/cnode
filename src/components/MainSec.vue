@@ -1,17 +1,25 @@
 <template>
-    <div class='secDiv'>
-        <div v-for='item of content'>
-                <img :src='item.author.avatar_url' :title='item.author.loginname'>
-            <div class='textDiv'>
-                <router-link :to='{name:"ArticleRoute",params:{id:item.id}}'>{{item.title}}</router-link>
-
-                <div class='stuff'>
-                    <span>回复：{{item.reply_count}}</span>
-                    <span>创建于：{{item.create_at | dealTime}}</span>
-                </div>
+<el-container direction="vertical">
+        <el-main v-for='item of content' :key='item.id' class="one-line">
+            <div class="userimg">
+              <img :src='item.author.avatar_url' :title='item.author.loginname'>
             </div>
-        </div>
-    </div>
+            <div class="content">
+
+              <div class="title">
+                <router-link :to='{name:"ArticleRoute",params:{id:item.id}}'>
+                  {{item.title}}
+                </router-link>
+              </div>
+
+              <div class='stuff'>
+                  <span>回复：{{item.reply_count}}</span>
+                  <span>创建于：{{item.create_at | dealTime}}</span>
+              </div>
+
+            </div>
+        </el-main>
+</el-container>
 
 </template>
 
@@ -65,4 +73,30 @@ export default {
 
 
 <style>
+.one-line {
+  display: flex;
+  background-color: #f9fafc;
+  border-bottom: solid 2px #aaa;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.userimg {
+  height: 5em;
+  width: 5em;
+  margin-right: 2em;
+}
+
+.userimg img {
+  width: 100%;
+}
+
+.stuff {
+  color: #d4d9e0;
+}
+
 </style>
