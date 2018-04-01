@@ -1,8 +1,18 @@
 <template>
     <div id="app">
-    <cnode-head></cnode-head>
-    <router-view name='main'></router-view>
+      <el-container>
 
+        <el-header>
+          <cnode-head></cnode-head>
+        </el-header>
+
+        <el-container>
+          <el-main>
+            <router-view name='main'></router-view>
+          </el-main>
+        </el-container>
+
+      </el-container>
     </div>
 </template>
 
@@ -18,5 +28,8 @@ export default {
 </script>
 
 <style>
+#app {
+  margin: 0 8em;
+}
 </style>
 
