@@ -2,8 +2,8 @@
     <div class='sideDiv'>
         <div>
             <router-link :to='{name: "UserRoute",params:{name: userInfo.loginname}}'><img :src='userInfo.avatar_url'></router-link>
-            <span>{{userInfo.loginname}}</span>
         </div>
+        <div>{{userInfo.loginname}}</div>
         <p>
             https://github.com/{{userInfo.githubUsername}}
         </p>

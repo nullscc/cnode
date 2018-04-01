@@ -1,6 +1,6 @@
 <template>
-    <div class='secDiv'>
-        <div class='profile'>
+    <el-container direction="vertical">
+        <el-main class="main">
             <div>
                 <img :src='userInfo.avatar_url' :title='userInfo.loginname'>
                 <span>{{userInfo.loginname}}</span>
@@ -11,12 +11,13 @@
                 <span>Github：</span> https://github.com/{{userInfo.githubUsername}}</p>
             <p>
                 <span>注册时间：</span>{{dealCommentTime(userInfo.create_at)}}</p>
-        </div>
+        </el-main>
 
-        <div class='recentReplies'>
+        <el-main class="main">
+            <div class="recent-topic">
             <p>最近参与的话题</p>
             <template v-for='(item,index) of userInfo.recent_replies'>
-                <div v-if='index < 4' :key='index'>
+                <div v-if='index < 4' :key='index' class="flex">
                     <router-link :to='{name: "UserRoute",params:{name: item.author.loginname}}'>
                         <img :src='item.author.avatar_url' :title='item.author.loginname'>
                     </router-link>
@@ -25,20 +26,23 @@
                     </router-link>
                 </div>
             </template>
-        </div>
+            </div>
 
-        <div class='recentTopics'>
+            <div class="recent-topic">
             <p>最近创建的话题</p>
             <template v-for='(item,index) of userInfo.recent_topics'>
-                <div v-if='index < 5 && item' :key='index'>
-                    <img :src='item.author.avatar_url' :title='item.author.loginname'>
+                <div v-if='index < 5 && item' :key='index' class="flex">
+                    <div>
+                      <img :src='item.author.avatar_url' :title='item.author.loginname'>
+                    </div>
                     <router-link :to='{name: "ArticleRoute",params:{id:item.id}}'>
                         <p class='userTitle'>{{item.title}}</p>
                     </router-link>
                 </div>
             </template>
-        </div>
-    </div>
+            </div>
+        </el-main>
+    </el-container>
 </template>
 
 <script>
@@ -80,4 +84,18 @@ export default {
 };
 </script>
 
-
+<style>
+.main {
+  background-color: #f0f2f7;
+}
+.recent-topic {
+  background-color: #e6e9f1;
+}
+.flex {
+  display: flex;
+}
+.flex > * {
+  align-items: center;
+  align-content: center;
+}
+</style>
