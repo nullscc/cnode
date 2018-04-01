@@ -38,7 +38,10 @@ module.exports = {
               test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
               loader: 'url-loader',
           },
-
+          {
+              test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+              loader: 'url-loader',
+          },
       ]
   },
   devServer: {

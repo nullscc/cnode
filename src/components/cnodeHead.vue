@@ -1,7 +1,10 @@
 <template>
     <div class='head'>
             <div class='dialogDiv'>
-                <router-link :to='{name:"RootRoute"}'>回主页</router-link>
+                <router-link :to='{name:"RootRoute"}'>
+                  <img src='../assets/cnodejs.svg' title='cnodejs.svg'>
+                </router-link>
+
                 <el-button type="text" @click='aboutShow=true'>关于</el-button>
                 <el-dialog title="关于" :visible.sync="aboutShow">
                 <span>
@@ -44,8 +47,4 @@ export default {
 </script>
 
 <style>
-.dialogDiv {
-  margin-bottom: 4em;
-  border-bottom: solid 1px #eee;
-}
 </style>
